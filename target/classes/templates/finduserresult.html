@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Użytkownicy przefiltrowani</title>
+
+</head>
+
+<body>
+<h1>
+    Użytkownicy wyszukani
+</h1>
+
+
+<table class="regular-table">
+    <thead>        <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Data dopisania</th>
+    </tr>
+    </thead>
+    <tbody class="regular-table">
+    <tr th:each="user : ${find}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.surname}"></td>
+            <td th:text="${user.addDate}"></td>
+    </tr>
+    </tbody>
+
+    <form action="#" th:action="@{/goback}" method="post">
+        <input type="submit" value="Wroc do glownego menu" class="btn btn-red"/>
+    </form>
+</table>
