@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Show all users</title>
+
+</head>
+
+<body>
+<h1>
+    Wszyscy uzytkownicy zarejestrowani w sklepie
+</h1>
+
+<table class="regular-table">
+    <thead>
+    <tr>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Data dopisania</th>
+        <th>Akcja</th>
+    </tr>
+    </thead>
+    <tbody class="regular-table">
+    <tr th:each="user : ${users}">
+        <form action="/deleteuser" method="post" th:object="${user}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.surname}"></td>
+            <td th:text="${user.addDate}"></td>
+            <td>
+                <input type="hidden" name="name" th:value="${user.name}"/>
+                <input type="hidden" name="surname" th:value="${user.surname}"/>
+                <button class="btn btn-success" value="remove">Usuń</button>
+            </td>
+        </form>
+    </tr>
+    </tbody>
+</table>
+
+
+<form action="#" th:action="@{/goback}" method="post">
+    <input type="submit" value="Wroc do glownego menu" class="btn btn-red"/>
+</form>
+
+</body>
+</html>

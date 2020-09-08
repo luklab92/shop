@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Mały sklep internetowy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css"
+    th:href="@{/css/style.css}">
+</head>
+
+<body>
+<h1>Mały sklep internetowy</h1>
+<form action="/finduser">
+    <button class="btn btn-success" value="Przegladaj użytkownikow">Szukaj</button>
+</form>
+<form action="/adduser">
+    <button class="btn btn-primary" type="submit">Dodaj uzytkownika</button>
+</form>
+<form action="/addProduct">
+    <button class="btn btn-primary" type="submit">Dodaj produkt</button>
+</form>
+<form action="/users">
+    <button class="btn btn-primary" type="submit">Wyswietl uzytkownikow</button>
+</form>
+<form action="/allproducts">
+    <button class="btn btn-primary" type="submit">Wyswietl wszystkie produkty</button>
+</form>
+<Form>
+    <button class="btn btn-warning" value="Szukaj produktu">Szukaj produktu</button>
+</Form>
+
+<iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/i84L16VL6c8" frameborder="0" allowfullscreen></iframe>
+</body>
+
+
+
+</html>
